@@ -14,6 +14,12 @@ public class Produto {
         this.quantity = quantity;
         this.total = price * quantity;
     }
+
+    public Produto(String name, double price){ // método de sobrecarga. é utiliado quando queremos flexibilizar as inicializações da classe.
+        this.name = name;
+        this.price = price;
+    }
+
     public void showResult(){
         System.out.printf("O produto %s custa $%.2f e comprando %d fica no valor de $%.2f%n", name, price, quantity, total);
         System.out.println();
